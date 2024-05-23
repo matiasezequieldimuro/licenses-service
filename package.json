@@ -1,0 +1,52 @@
+{
+  "name": "licence-applications",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2.0.0",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1.7.1",
+    "@sap/eslint-plugin-cds": "^3",
+    "eslint": "^9"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "folders": {
+      "db": "db/",
+      "srv": "srv/",
+      "app": "app/"
+    },
+    "requires": {
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "common_user": {
+            "password": "123"
+          },
+          "applicant_user": {
+            "password": "123",
+            "roles": [
+              "applicant"
+            ]
+          }
+        }
+      },
+      "db": {
+        "[development]": {
+          "kind": "sqlite",
+          "credentials": {
+            "url": "db.sqlite"
+          }
+        }
+      }
+    }
+  }
+}
