@@ -7,6 +7,7 @@ default-*.json
 .cdsrc-private.json
 gen/
 node_modules/
+package-lock.json
 target/
 
 # Web IDE, App Studio
@@ -27,7 +28,7 @@ mta_archives/
 *.flattened-pom.xml
 
 # IDEs
-# .vscode
+.vscode
 # .idea
 
 # @cap-js/cds-typer
