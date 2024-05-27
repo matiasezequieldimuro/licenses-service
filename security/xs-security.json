@@ -1,0 +1,43 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.administrator",
+      "description": "administrator"
+    },
+    {
+      "name": "$XSAPPNAME.applicant",
+      "description": "applicant"
+    },
+    {
+      "name": "$XSAPPNAME.approver",
+      "description": "approver"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "administrator",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.administrator"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "applicant",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.applicant"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "approver",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.approver"
+      ],
+      "attribute-references": []
+    }
+  ]
+}
