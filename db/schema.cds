@@ -12,17 +12,16 @@ namespace hexagon.licenseapplications.schema;
 entity Employees : cuid {
     firstName   : String(20) @mandatory;
     lastName    : String(20) @mandatory;
-    email       : String(20) @mandatory;
+    email       : String(50) @mandatory;
     bornDate    : Date;
     genre       : Genre;
     isApprover  : Boolean default false;
     role        : Association to Roles @assert.target @mandatory;
     licenses    : Association to many Licenses on licenses.employee = $self;
-    licenseType : Composition of many Employees_LicenseTypes on licenseType.employee = $self;
+    licenseTypes : Composition of many Employees_LicenseTypes on licenseTypes.employee = $self;
 }
 
 entity Licenses : cuid {
-    // TODO: Chequear qué pasa si no pongo 'many'.
     licenseType     : Association to many LicenseTypes @assert.target @mandatory;
     state           : Association to many States @assert.target @mandatory;
     employee        : Association to one Employees @assert.target @mandatory;
@@ -42,6 +41,6 @@ entity Documents : cuid {
 
 entity Employees_LicenseTypes : cuid {
     employee    : Association to one Employees @assert.target @mandatory;
-    licenseType : Association to one LicenseTypes;
+    licenseType : Association to one LicenseTypes @assert.target @mandatory;
     daysTaked   : Integer default 0;
 }

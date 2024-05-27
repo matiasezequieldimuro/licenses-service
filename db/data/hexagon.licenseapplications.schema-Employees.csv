@@ -1,1 +1,3 @@
-ID,firstName,lastName,email,bornDate,isApprover
+ID,firstName,lastName,email,bornDate,isApprover,role_ID,genre_ID
+f48d071b-d9e5-4aff-bcac-81802c9fb3d9,Matias,Di muro,mdimuro@hexagonconsulting.net,,false,2,M
+f48d071b-d9e5-4aff-bcac-81802c9fb310,Miguel Angel,Duran Garcia,mduran@hexagonconsulting.net,,true,1,M

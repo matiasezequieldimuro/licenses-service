@@ -28,13 +28,28 @@
       "auth": {
         "kind": "mocked",
         "users": {
-          "common_user": {
-            "password": "123"
-          },
-          "applicant_user": {
+          "mdimuro@hexagonconsulting.net": {
             "password": "123",
             "roles": [
               "applicant"
+            ]
+          },
+          "approver@email.com": {
+            "password": "123",
+            "roles": [
+              "approver"
+            ]
+          },
+          "applicant@email.com": {
+            "password": "123",
+            "roles": [
+              "applicant"
+            ]
+          },
+          "admin@email.com": {
+            "password": "123",
+            "roles": [
+              "administrator"
             ]
           }
         }
