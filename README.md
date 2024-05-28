@@ -23,4 +23,5 @@ Por otro lado, se desea contar con **traducciones (i18n)** a diversos lenguajes 
    - Autenticación por credenciales.
    - Autorización por roles.
    - Restricciones en según ID del usuario.
+- Protocolo de internacionalización (i18n).
  - Buenas prácticas recomendadas por la documentación oficial de SAP CAP.
