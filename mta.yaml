@@ -47,7 +47,7 @@ resources:
     parameters:
       service: xsuaa
       service-plan: application
-      path: ./security/xs-security.json
+      path: security/xs-security.json
       config:
         xsappname: licence-applications-${org}-${space}
         tenant-mode: dedicated

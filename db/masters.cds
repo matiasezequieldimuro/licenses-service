@@ -33,7 +33,7 @@ entity Genres : CodeList {
     key ID  : GenreID @mandatory;
 }
 
-type GenreID : String(1) enum {
+type GenreID : String(2) enum {
     Masculin    = 'M';
     Feminin     = 'F';
     NonBinary   = 'NB';
