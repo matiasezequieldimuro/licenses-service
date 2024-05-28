@@ -1,25 +1,26 @@
-# Getting Started
+# LICENSES SERVICE
 
-Welcome to your new project.
+### Introducción
+Proyecto personal desarrollado con **CAP CDS** para poner en práctica conceptos relacionados a dicha tecnología.
 
-It contains these folders and files, following our recommended project layout:
+### Solución
+Se requiere un sistema que permita gestionar y administrar dentro de una base de datos **empleados** y sus respectivas **licencias**. 
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+Es necesario proteger con **seguridad** al aplicativo, autenticando y autorizando a todo usuario que intente acceder. Éstos usuarios podrán ser **'Solicitantes'**, **'Aprobadores'** o **'Administradores'**. Según los roles asignados se limita dicho acceso a ciertas funcionalidades. 
 
+Además, se solicita **validar** toda entrada de datos previo a cualquier operación de escritura.
 
-## Next Steps
+Por otro lado, se desea contar con **traducciones (i18n)** a diversos lenguajes en función de la localización del cliente.
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
+### Conceptos puestos en práctica.
+- Creación de entidades del dominio (asociación, composición, aspectos, tipos, enums).
+- Definición de servicios que expongan dichas entidades.
+- Eventos:
+    - beforeHandlers.
+    - afterHandlers.
+    - onHandlers (Actions).
+- Seguridad:
+   - Autenticación por credenciales.
+   - Autorización por roles.
+   - Restricciones en según ID del usuario.
+ - Buenas prácticas recomendadas por la documentación oficial de SAP CAP.
