@@ -34,31 +34,33 @@
     },
     "requires": {
       "auth": {
-        "kind": "mocked",
-        "users": {
-          "mdimuro@hexagonconsulting.net": {
-            "password": "123",
-            "roles": [
-              "applicant"
-            ]
-          },
-          "approver@email.com": {
-            "password": "123",
-            "roles": [
-              "approver"
-            ]
-          },
-          "applicant@email.com": {
-            "password": "123",
-            "roles": [
-              "applicant"
-            ]
-          },
-          "admin@email.com": {
-            "password": "123",
-            "roles": [
-              "administrator"
-            ]
+        "[development]": {
+          "kind": "mocked",
+          "users": {
+            "mdimuro@hexagonconsulting.net": {
+              "password": "123",
+              "roles": [
+                "applicant"
+              ]
+            },
+            "approver@email.com": {
+              "password": "123",
+              "roles": [
+                "approver"
+              ]
+            },
+            "applicant@email.com": {
+              "password": "123",
+              "roles": [
+                "applicant"
+              ]
+            },
+            "admin@email.com": {
+              "password": "123",
+              "roles": [
+                "administrator"
+              ]
+            }
           }
         }
       },
@@ -68,11 +70,12 @@
           "credentials": {
             "url": "db.sqlite"
           }
+        },
+        "[production]": {
+          "kind": "hana",
+          "db": "hana",
+          "auth": "xsuaa"
         }
-      },
-      "[production]": {
-        "db": "hana",
-        "auth": "xsuaa"
       }
     }
   }
