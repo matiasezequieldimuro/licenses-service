@@ -23,7 +23,8 @@
   "scripts": {
     "start": "cds-serve",
     "start:dev": "cds watch",
-    "test": "jest",
+    "jest": "jest ./test --config ./jest.config.js --runInBand --detectOpenHandles --forceExit --ci --coverage",
+    "test": "cds bind --profile test --exec npm run jest",
     "build:mta": "mbt build -t ./",
     "deploy:data": "cds deploy",
     "deploy:mta": "cf deploy licence-applications_1.0.1.mtar"
@@ -78,6 +79,14 @@
           "db": "hana",
           "auth": "xsuaa"
         }
+      }
+    },
+    "[test]": {
+      "folders": {
+        "db": "db"
+      },
+      "db": {
+        "kind": "sql"
       }
     }
   }
