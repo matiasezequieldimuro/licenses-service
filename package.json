@@ -22,6 +22,7 @@
   "scripts": {
     "start": "cds-serve",
     "start:dev": "cds watch",
+    "test": "echo 'hello world'",
     "build:mta": "mbt build -t ./",
     "deploy:data": "cds deploy",
     "deploy:mta": "cf deploy licence-applications_1.0.1.mtar"
