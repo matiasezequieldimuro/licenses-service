@@ -7,7 +7,7 @@ default-*.json
 .cdsrc-private.json
 gen/
 node_modules/
-package-lock.json
+# package-lock.json
 target/
 
 # Web IDE, App Studio
