@@ -23,7 +23,7 @@
   "scripts": {
     "start": "cds-serve",
     "start:dev": "cds watch",
-    "jest": "jest ./test --config ./jest.config.js --runInBand --detectOpenHandles --forceExit --ci --coverage",
+    "jest": "jest ./test --config ./jest.config.js --runInBand --detectOpenHandles --forceExit --ci",
     "test": "cds bind --profile test --exec npm run jest",
     "build:mta": "mbt build -t ./",
     "deploy:data": "cds deploy",
