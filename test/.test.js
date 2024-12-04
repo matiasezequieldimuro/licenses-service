@@ -2,7 +2,7 @@ const cds = require('@sap/cds')
 
 describe("Licenses Service REST API Test with Jest", ()=>{
     
-	const { GET } = cds.test(__dirname+'/..');
+	const test = cds.test(__dirname+'/..');
 
 	const users = {
 		admin: {
@@ -22,8 +22,9 @@ describe("Licenses Service REST API Test with Jest", ()=>{
 		// Arrange: set initial data or input.
 		let ID = 1;
 		// Act: do what we want to test.
-		let res = await GET(`/service/licenses/LicenseTypes/${ID}`, users.admin);
+		let res = await test.get(`/service/licenses/LicenseTypes/${ID}`, users.admin);
 		// Verify: check output is correct given input.
+		console.log(res.data)
 		expect(res.data.name).toBe("Holidays");
 		expect(res.data.ID).toBe(ID);
 		expect(res.status).toBe(200);
