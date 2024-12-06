@@ -19,7 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Set up NodeJS 18
-        uses: actions/setup-java@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
